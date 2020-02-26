@@ -1,8 +1,13 @@
-# Smallest React/Typescript build example
+# Dads Jokes 
+Small app made to practice 
+TypeScript, React and styled-components
+Idea is taken from Udemy - modern-react-bootcamp by Colt Steele
+
+## App build on  Smallest React/Typescript build example by https://github.com/gmoskal
 
 <img alt="Smallest React/Typescript build and publish example" src="https://www.svgrepo.com/show/84150/hedgehog.svg" width="100px" />
 
-## Running
+### Running
 
 To install packages and start local http server type
 
@@ -12,7 +17,7 @@ npm i; npm start
 
 your parcel dev server should be running on [http://localhost:1234](http://localhost:1234)
 
-## Publishing as a github page
+### Publishing as a github page
 
 In order to publish your project as github, enable `github pages` on your repo setting. 
 (To be precise: go to repository settings under `GitHub Pages` sections set as a source: `master branch /docs folder`)
@@ -27,4 +32,4 @@ That compiles your react/ts app into your local _docs/_ folder. Now add all gene
 When that will finish, your app should be available on https://YOUR_GITHUB_USERNAME.github.io/YOUR_REPO_NAME/ 
 
 This repo build is available [here](https://gmoskal.github.io/smallest-react-ts/)
-## Happy coding
+### Happy coding

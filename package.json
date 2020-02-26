@@ -2,17 +2,28 @@
   "name": "smallest-react-ts",
   "private": true,
   "scripts": {
-    "start": "parcel serve *.html --no-autoinstall",
+    "start": "parcel serve src/*.html --no-autoinstall",
     "build": "rm -rf docs; npx parcel build index.html --public-url . --out-dir docs"
   },
   "devDependencies": {
     "@types/react": "16.9.19",
     "@types/react-dom": "16.9.5",
+    "@types/styled-components": "^5.0.0",
     "parcel-bundler": "1.12.4",
     "typescript": "3.7.5"
   },
   "dependencies": {
+    "@fortawesome/fontawesome-svg-core": "^1.2.27",
+    "@fortawesome/free-regular-svg-icons": "^5.12.1",
+    "@fortawesome/free-solid-svg-icons": "^5.12.1",
+    "@fortawesome/react-fontawesome": "^0.1.8",
+    "@types/react-fontawesome": "^1.6.4",
+    "axios": "^0.19.2",
     "react": "16.12.0",
-    "react-dom": "16.12.0"
+    "react-dom": "16.12.0",
+    "react-fontawesome": "^1.7.1",
+    "react-storage-hooks": "^3.0.3",
+    "s": "^1.0.0",
+    "styled-components": "^5.0.1"
   }
 }
