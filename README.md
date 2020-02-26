@@ -3,6 +3,8 @@ Small app made to practice
 TypeScript, React and styled-components
 Idea is taken from Udemy - modern-react-bootcamp by Colt Steele
 
+example -> https://hejuhenryk.github.io/Dads-Jokes/ 
+
 ## App build on  Smallest React/Typescript build example by https://github.com/gmoskal
 
 <img alt="Smallest React/Typescript build and publish example" src="https://www.svgrepo.com/show/84150/hedgehog.svg" width="100px" />
