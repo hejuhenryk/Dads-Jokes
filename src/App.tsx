@@ -107,7 +107,7 @@ const App: React.FC = () => {
                 "linear-gradient(135deg, gold 0%, gold 50%, brown 0%, brown 50%)"
             }}
           >
-            find joke
+            get more
           </button>
         </div>
         <div className="jokes">
@@ -128,6 +128,22 @@ const GlobalStyles = createGlobalStyle`
   body {
     font-family: 'Rubik', sans-serif;
   }
+`;
+
+const laugh = keyframes`
+0% {
+  transform: rotate(0deg);
+}
+30%, 60% {
+  transform: rotate(10deg) translate( .1rem, -0.1rem);
+}
+20%, 50%, 80% {
+  transform: rotate(-10deg) translate( -0.1rem, .1rem);
+}
+100% {
+  transform: rotate(0deg);
+}
+
 `;
 
 const JokesApp = styled.div`
@@ -185,6 +201,15 @@ const JokesApp = styled.div`
       color: black;
       font-weight: bold;
       margin: .3rem;
+      transition: all .5s ease-in-out;
+      word-spacing: 1rem;
+      :focus {
+        outline: none;
+      }
+      :hover {
+        box-shadow: 7px 7px 15px 1px black;
+        transform: translateY(.2rem)
+      }
     }
   }
   .laugh {
@@ -210,27 +235,7 @@ const JokesApp = styled.div`
   }
 `;
 
-const Menu = styled.div`
-  /* height: 80%; */
-  width: 15rem;
-  border: pink solid 4px;
-`;
 
-const laugh = keyframes`
-0% {
-  transform: rotate(0deg);
-}
-30%, 60% {
-  transform: rotate(10deg) translate( .1rem, -0.1rem);
-}
-20%, 50%, 80% {
-  transform: rotate(-10deg) translate( -0.1rem, .1rem);
-}
-100% {
-  transform: rotate(0deg);
-}
-
-`;
 
 
 render(<App />, document.getElementById("root"));
