@@ -10,8 +10,7 @@ import {
   faGrinTears,
   faGrinSquintTears
 } from "@fortawesome/free-regular-svg-icons";
-import {   faArrowUp,
-    faArrowDown} from "@fortawesome/free-solid-svg-icons"
+import { faArrowUp, faArrowDown } from "@fortawesome/free-solid-svg-icons";
 
 interface JokeProps extends JokeStatus {
   voteHandler: (id: string, vote: -1 | 1) => void;
@@ -39,14 +38,14 @@ export const Joke: React.FC<JokeProps> = ({ id, joke, vote, voteHandler }) => {
         />
       </Voting>
       <p>{joke}</p>
-      <div className='emoji'>
+      <div className="emoji">
         <FontAwesomeIcon icon={getExpression(vote).emoji} />
       </div>
     </JokeStyled>
   );
 };
 
-const JokeStyled = styled.div<{color: string}>`
+const JokeStyled = styled.div<{ color: string }>`
   display: flex;
   width: 100%;
   background-color: white;
@@ -56,10 +55,11 @@ const JokeStyled = styled.div<{color: string}>`
   font-weight: 400;
   padding: 0.8rem;
   .emoji {
-      font-size: 2rem;
-      padding-left: 1rem;
-      font-weight: 100;
-      color: ${p=>p.color};
+    font-size: 2rem;
+    padding-left: 1rem;
+    font-weight: 100;
+    color: ${p => p.color};
+    filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
   }
 `;
 
@@ -78,6 +78,9 @@ const Vote = styled.div<{ color: string }>`
 const Voting = styled.div`
   display: flex;
   align-items: center;
+  filter: drop-shadow(1px 1px 2px rgba(0, 0, 0, 0.5));
+  margin-right: 0.3rem;
+  justify-content: space-between;
   svg {
     background-color: transparent;
     border: none;
@@ -85,6 +88,11 @@ const Voting = styled.div`
     cursor: pointer;
     :focus {
       outline: none;
+    }
+    transition: all .5s ease-in-out;
+    :hover {
+      /* align-self: flex-start; */
+      transform: skew(10deg)
     }
   }
 `;
